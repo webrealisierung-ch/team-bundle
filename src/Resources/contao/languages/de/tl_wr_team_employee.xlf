@@ -1,0 +1,94 @@
+<?xml version="1.0" ?><xliff version="1.1">
+    <file datatype="php" original="src/Resources/contao/languages/en/tl_wr_team_employee.php" source-language="en" target-language="de">
+        <body>
+            <trans-unit id="tl_wr_team_employee.title_legend">
+                <source>Employee details</source>
+                <target>Mitarbeiter Details</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.title.0">
+                <source>Employee name</source>
+                <target>Mitarbeitername</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.title.1">
+                <source>Given and family Name of the employee </source>
+                <target>Vor-/Nachname des Mitarbeiters</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.alias.0">
+                <source>Alias</source>
+                <target>Alias</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.alias.1">
+                <source>This value is set automatically</source>
+                <source>Dieser Wert wird automatisch ausgefüllt</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.description.0">
+                <source>Employee description</source>
+                <target>Mitarbeiter Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.description.1">
+                <source>Employee description</source>
+                <target>Mitarbeiter Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.image_legend">
+                <source>Employee image</source>
+                <target>Mitarbeiter-Bild</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.employeeSRC.0">
+                <source>Employee image</source>
+                <target>Mitarbeiter-Bild</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.employeeSRC.1">
+                <source>Select the image of the employee</source>
+                <target>Wählen Sie das Bild des Mitarbeiters aus</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.category_legend">
+                <source>Categories</source>
+                <target>Kategorien</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.categories.0">
+                 <source>Categories</source>
+                <target>Kategorien</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.categories.1">
+                <source>Select the desired category.</source>
+                <target>Wählen Sie die gewünschte Kategorie aus</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.publish_legend">
+                <source>Publish settings</source>
+                <target>Veröffentlichung</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.published.0">
+                <source>Publish employee</source>
+                <target>Mitarbeiter veröffentlichen</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.published.1">
+                <source>Make the employee publicly visible on the website.</source>
+                <target>Schaltet den Mitarbeiter auf der Webseite sichtbar</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.start.0">
+                <source>Start</source>
+                <target>Anzeigen ab</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.stop.0">
+                <source>Stop</source>
+                <target>Anzeigen bis</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.new.0">
+                <source>New employee</source>
+                <target>Neuer Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.edit.1">
+                <source>Edit employee</source>
+                <target>Mitarbeiter bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.delete.1">
+                <source>Delete employee</source>
+                <target>Mitarbeiter löschen</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.toggle.1">
+                <source>Toggle visibility</source>
+                <target>Sichtbar/Unsichtbar</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

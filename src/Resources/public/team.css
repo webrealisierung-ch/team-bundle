@@ -1,0 +1,13 @@
+#tl_navigation .group-wr{
+    color: #fff;
+    background-image:url(/bundles/wrteam/package.svg);
+    background-position:3px 2px;
+    background-repeat:no-repeat no-repeat;
+}
+.header_categories{
+    background-image: url(/bundles/wrteam/tag.svg);
+    padding: 3px 0 3px 19px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin-left: 15px
+}

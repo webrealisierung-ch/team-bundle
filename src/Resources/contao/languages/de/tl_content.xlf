@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file datatype="php" original="src/Resources/contao/languages/en/tl_content.php" source-language="en" target-language="de">
+        <body>
+            <trans-unit id="tl_content.team_legend">
+                <source>Team/Categories</source>
+                <target>Team/Kategorien</target>
+            </trans-unit>
+            <trans-unit id="tl_content.category.0">
+                <source>Categories</source>
+                <target>Kategorien</target>
+            </trans-unit>
+            <trans-unit id="tl_content.category.1">
+                <source>Chose the categories you want show on the website.</source>
+                <target>Wählen Sie die Kategorien aus welche Sie auf der Webseite anzeigen möchten.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.employee_name_asc">
+                <source>Name (ascending)</source>
+                <target>Name (aufsteigend)</target>
+            </trans-unit>
+            <trans-unit id="tl_content.employee_name_desc">
+                <source>Name (descending)</source>
+                <target>Name (absteigend)</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

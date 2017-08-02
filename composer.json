@@ -1,0 +1,28 @@
+{
+  "name": "wr/team-bundle",
+  "type": "contao-bundle",
+  "description": "Team bundle to show the employees of a company for Contao Open Source CMS",
+  "keywords": ["team","employees","category","contao"],
+  "homepage": "https://github.com/webrealisierung-ch/team-bundle",
+  "license": "LGPL-3.0",
+  "authors": [
+    {
+      "name": "Daniel Steuri ",
+      "email": "mail@webrealisierung.ch",
+      "homepage": "https://webrealisierung.ch"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "symfony/framework-bundle": "^3.3",
+    "contao/core-bundle": "^4.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wr\\TeamBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Wr\\TeamBundle\\ContaoManager\\Plugin"
+  }
+}

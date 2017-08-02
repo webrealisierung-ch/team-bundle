@@ -1,0 +1,33 @@
+<?xml version="1.0" ?><xliff version="1.1">
+    <file datatype="php" original="src/Resources/contao/languages/en/tl_wr_team_category.php" source-language="en">
+        <body>
+            <trans-unit id="tl_wr_team_category.title_legend">
+                <source>Category details</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_category.title.0">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_category.title.1">
+                <source>Name of the category </source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_category.alias.0">
+                <source>Alias</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_category.description.0">
+                <source>Category description</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_category.description.1">
+                <source>The detailed description of the category.</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_category.new.0">
+                <source>New team category</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_category.edit.1">
+                <source>Edit category</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_category.delete.1">
+                <source>Delete category</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

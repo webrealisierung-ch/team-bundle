@@ -1,0 +1,21 @@
+<?php if($this->Team):?>
+<div class="<?= $this->class ?> cf"<?= $this->cssID ?>>
+    <<?= $this->hl ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+    <?= $this->headline ?>
+    </<?= $this->hl ?>>
+
+    <?php foreach ($this->Team as $Employee): ?>
+        <?php if($Employee->published ): ?>
+            <div class="employee">
+                <?php if($Employee->singleSRC): ?>
+                    <div class="employee-image"><?= Image::getHtml(FilesModel::findByUuid($Employee->singleSRC)->path); ?></div>
+                <?php endif; ?>
+                <div class="employee-title"><?= $Employee->title; ?></div>
+                <?php if($Employee->description): ?>
+                    <div class="employee-description"><?= $Employee->description; ?></div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    </div>
+<?php endif; ?>
