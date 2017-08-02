@@ -18,7 +18,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['wr_team_category'] =  array(
     'exclude'                 => true,
     'search'                  => true,
     'inputType'               => 'checkbox',
-    'options_callback'        => array('tl_content_team_employee', 'getCategories'),
+    'options_callback'        => array('tl_content_wr_team_employee', 'getCategories'),
     'eval'                    => array('multiple'=>true, 'mandatory'=>true),
     'sql'                     => "blob NULL"
 );
@@ -39,7 +39,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['orderTeam'] = array(
     'sql'                     => "varchar(64) NOT NULL default ''"
 );
 
-class tl_content_team_employee extends Backend
+class tl_content_wr_team_employee extends Backend
 {
     /**
      * Import the back end user object
