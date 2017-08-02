@@ -4,15 +4,15 @@ With this bundle you can easily mangage your employees to display them on your w
 
 ## How to install
 
-###contao/standard-edition
+### contao/standard-edition
 
 todo
 
-###contao/managed-edition
+### contao/managed-edition
 
 todo
 
-##Dependencies
+## Dependencies
 
 - php: ^7.0
 - symfony/symfony: ^3.3
