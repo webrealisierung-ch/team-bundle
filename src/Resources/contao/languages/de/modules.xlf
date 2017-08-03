@@ -6,17 +6,17 @@
         <source>Company</source>
         <target>Firma</target>
       </trans-unit>
-      <trans-unit id="CTE.team-employee">
-        <source>Team</source>
-        <target>Team</target>
-      </trans-unit>
-      <trans-unit id="FMD.team-employee">
+      <trans-unit id="CTE.team-employee.0">
         <source>Team</source>
         <target>Team</target>
       </trans-unit>
       <trans-unit id="FMD.wr">
         <source>Company</source>
         <target>Firma</target>
+      </trans-unit>
+      <trans-unit id="FMD.team-employee">
+        <source>Team</source>
+        <target>Team</target>
       </trans-unit>
       <trans-unit id="MOD.wr">
         <source>Company</source>

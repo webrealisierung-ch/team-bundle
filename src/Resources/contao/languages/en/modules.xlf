@@ -2,10 +2,10 @@
 <xliff version="1.1">
   <file datatype="php" original="src/Resources/contao/languages/en/modules.php" source-language="en">
     <body>
-      <trans-unit id="CTE.wr">
+      <trans-unit id="CTE.wr.0">
         <source>Company</source>
       </trans-unit>
-      <trans-unit id="CTE.team-employee">
+      <trans-unit id="CTE.team-employee.0">
         <source>Team</source>
       </trans-unit>
       <trans-unit id="FMD.team-employee">
