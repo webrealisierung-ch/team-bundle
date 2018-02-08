@@ -137,7 +137,10 @@ class TeamWizard extends \Widget
 
         if($categories){
             $employeesByCategories = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories);
-            $arrCheck1 = $this->generateCategoryArray($employeesByCategories);
+
+            if($employeesByCategories){
+                $arrCheck1 = $this->generateCategoryArray($employeesByCategories);
+            }
         }
 
         if($activeRecordOrderTeam){
@@ -148,7 +151,9 @@ class TeamWizard extends \Widget
                 $employeesBySort = \WrTeamEmployeeModel::findMultipleByIds(unserialize($activeRecordOrderTeam));
             }
 
-            $arrCheck2 = $this->generateCategoryArray($employeesBySort);
+            if($employeesBySort){
+                $arrCheck2 = $this->generateCategoryArray($employeesBySort);
+            }
 
             if(sort($arrCheck1) === sort($arrCheck2)){
                 return $employeesBySort;
