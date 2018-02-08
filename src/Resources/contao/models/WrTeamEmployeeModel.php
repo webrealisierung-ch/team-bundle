@@ -16,17 +16,36 @@ class WrTeamEmployeeModel extends \Model
 
 	static function findTeamEmployeesByCategories($arrCategories=array(),$arrOptions=array("sort"=>"ASC"))
     {
+        $i=0;
+        $arrColumns = "";
+        $arrValues = array();
         $t = static::$strTable;
         if (isset($arrCategories))
         {
+
             foreach ($arrCategories as $category) {
-                $arrColumns[] = $t . '.categories LIKE ?';
+                //$arrColumns[] = $t . '.categories LIKE ?';
+                //$arrValues[] = '%:"' . $category . '"%';
+                if($i===0){
+                    $arrColumns = $t . '.categories LIKE %s';
+                } else {
+                    $arrColumns .= " OR ".$t . '.categories LIKE %s';
+                }
                 $arrValues[] = '%:"' . $category . '"%';
+                $i++;
             }
-        return static::findBy($arrColumns, $arrValues, $arrOptions);
+
+            unset($i);
+
+            return static::findBy(array($arrColumns),$arrValues,$arrOptions);
+
         }
 
         return static::findAll($arrOptions);
+
+    }
+
+    private function setCategories($categories){
 
     }
 
