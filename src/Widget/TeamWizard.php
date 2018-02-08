@@ -129,14 +129,16 @@ class TeamWizard extends \Widget
 
     private function loadEmployees(){
 
-        $categories = deserialize($this->activeRecord->wr_team_category);
 
+        $employeesByCategories = null;
+
+        $categories = deserialize($this->activeRecord->wr_team_category);
         $activeRecordOrderTeam = $this->activeRecord->orderTeam;
 
-        $arrCheck1 = array();
-
-        $employeesByCategories = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories);
-        $arrCheck1 = $this->generateCategoryArray($employeesByCategories);
+        if($categories){
+            $employeesByCategories = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories);
+            $arrCheck1 = $this->generateCategoryArray($employeesByCategories);
+        }
 
         if($activeRecordOrderTeam){
 
@@ -151,7 +153,6 @@ class TeamWizard extends \Widget
             if(sort($arrCheck1) === sort($arrCheck2)){
                 return $employeesBySort;
             }
-
         }
 
         return $employeesByCategories;

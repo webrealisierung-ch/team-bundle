@@ -21,7 +21,7 @@ class ModuleTeamEmployee extends \Module
 
         $categories=deserialize($this->objModel->wr_team_category);
 
-        $order = $this->objModel->orderTeam;
+        $order = $this->objModel->sortTeam;
 
         switch ($order){
             case "name_asc":
