@@ -6,12 +6,28 @@
                 <target>Mitarbeiter Details</target>
             </trans-unit>
             <trans-unit id="tl_wr_team_employee.title.0">
-                <source>Employee name</source>
-                <target>Mitarbeitername</target>
+                <source>Academic Title</source>
+                <target>Akademische Titel</target>
             </trans-unit>
             <trans-unit id="tl_wr_team_employee.title.1">
-                <source>Given and family Name of the employee </source>
-                <target>Vor-/Nachname des Mitarbeiters</target>
+                <source>Title of the employee. For example Dr., Med., Phil.</source>
+                <target>Titel des Mitarbeiter. Z.B Dr., Med. Phil.</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.givenName.0">
+                <source>Given Name</source>
+                <target>Vorname</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.givenName.1">
+                <source>Given name of the employee</source>
+                <target>Vorname des Mitarbeiters</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.familyName.0">
+                <source>Family Name</source>
+                <target>Nachname</target>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.familyName.1">
+                <source>Family name of the employee</source>
+                <target>Nachname des Mitarbeiters</target>
             </trans-unit>
             <trans-unit id="tl_wr_team_employee.alias.0">
                 <source>Alias</source>
