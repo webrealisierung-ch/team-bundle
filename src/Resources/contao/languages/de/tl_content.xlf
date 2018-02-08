@@ -22,6 +22,14 @@
                 <source>Name (descending)</source>
                 <target>Name (absteigend)</target>
             </trans-unit>
+            <trans-unit id="tl_content.employee_name_asc">
+                <source>Name (ascending)</source>
+                <target>Name (aufsteigend)</target>
+            </trans-unit>
+            <trans-unit id="tl_content.employee_name_desc">
+                <source>Name (descending)</source>
+                <target>Name (absteigend)</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
