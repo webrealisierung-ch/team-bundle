@@ -21,9 +21,11 @@ class ContentTeamEmployee extends \ContentElement
 
         $categories=deserialize($this->objModel->wr_team_category);
 
-        $order = $this->objModel->orderTeam;
+        $order = unserialize($this->objModel->orderTeam);
 
-        switch ($order){
+        $sort =  $this->objModel->sortBy;
+
+        switch ($sort){
             case "name_asc":
                 $employees = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories,array('order' => 'tl_wr_team_employee.title ASC'));
                 break;
@@ -35,6 +37,9 @@ class ContentTeamEmployee extends \ContentElement
                 break;
             case "date_desc":
                 $employees = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories,array('order' => 'tl_wr_team_employee.tstamp DESC'));
+                break;
+            case "custom":
+                $employees = \WrTeamEmployeeModel::findMultipleByIds($order);
                 break;
             default:
                 $employees = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories,array('order' => 'tl_wr_team_employee.tstamp ASC'));
