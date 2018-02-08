@@ -35,3 +35,5 @@ $GLOBALS['FE_MOD']['wr']['team-employee'] = 'Wr\ModuleTeamEmployee';
  * FRONT END CONTENT ELEMENTS
  */
 $GLOBALS['TL_CTE']['wr']['team-employee'] = 'Wr\ContentTeamEmployee';
+
+$GLOBALS['BE_FFL']['teamWizard'] = 'Wr\TeamBundle\Widget\TeamWizard';
