@@ -40,8 +40,8 @@ $GLOBALS['TL_DCA']['tl_wr_team_employee'] = array
         ),
         'label'=>array
         (
-            'fields'                  => array('title','categories'),
-            'format'                  => '%s <span style="color:#b3b3b3;padding-left:3px">[%s]</span>',
+            'fields'                  => array('title','givenName','familyName','categories'),
+            'format'                  => '%s %s %s <span style="color:#b3b3b3;padding-left:3px">[%s]</span>',
         ),
         'global_operations' => array
         (
@@ -82,7 +82,7 @@ $GLOBALS['TL_DCA']['tl_wr_team_employee'] = array
 	'palettes' => array
 	(
 		"__selector__" => array("published"),
-	    'default'                     => '{title_legend},title,alias,description;{image_legend},singleSRC;{category_legend},categories;{publish_legend},published',
+	    'default'                     => '{title_legend},title,givenName,familyName,alias,description;{image_legend},singleSRC;{category_legend},categories;{publish_legend},published',
 	),
     // Subpalettes
     'subpalettes' => array
@@ -111,16 +111,34 @@ $GLOBALS['TL_DCA']['tl_wr_team_employee'] = array
 			'exclude'                 => true,
 			'search'                  => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'tl_class'=>'w50'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
 		),
+        'givenName' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_team_employee']['givenName'],
+            'exclude'                 => true,
+            'search'                  => true,
+            'inputType'               => 'text',
+            'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50 clr'),
+            'sql'                     => "varchar(255) NOT NULL default ''"
+        ),
+        'familyName' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_wr_team_employee']['familyName'],
+            'exclude'                 => true,
+            'search'                  => true,
+            'inputType'               => 'text',
+            'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(255) NOT NULL default ''"
+        ),
 		'alias' => array
 		(
 				'label'                   => &$GLOBALS['TL_LANG']['tl_wr_team_employee']['alias'],
 				'exclude'                 => true,
 				'inputType'               => 'text',
 				'search'                  => true,
-				'eval'                    => array('rgxp'=>'alias', 'doNotCopy'=>true, 'maxlength'=>128, 'tl_class'=>'w50'),
+				'eval'                    => array('rgxp'=>'alias', 'doNotCopy'=>true, 'maxlength'=>128, 'tl_class'=>'w50 clr'),
 				'save_callback' => array
 				(
 						array('tl_wr_team_employee', 'generateAlias')
