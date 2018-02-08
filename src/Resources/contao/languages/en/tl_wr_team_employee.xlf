@@ -5,10 +5,22 @@
                 <source>Employee details</source>
             </trans-unit>
             <trans-unit id="tl_wr_team_employee.title.0">
-                <source>Employee name</source>
+                <source>Academic Title</source>
             </trans-unit>
             <trans-unit id="tl_wr_team_employee.title.1">
-                <source>Given and family Name of the employee </source>
+                <source>Title of the employee</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.givenName.0">
+                <source>Given Name</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.givenName.1">
+                <source>Given name of the employee</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.familiyName.0">
+                <source>Family Name</source>
+            </trans-unit>
+            <trans-unit id="tl_wr_team_employee.familiyName.1">
+                <source>Family name of the employee</source>
             </trans-unit>
             <trans-unit id="tl_wr_team_employee.alias.0">
                 <source>Alias</source>
