@@ -39,7 +39,7 @@ class ContentTeamEmployee extends \ContentElement
                 $employees = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories,array('order' => 'tl_wr_team_employee.tstamp DESC'));
                 break;
             case "custom":
-                $employees = \WrTeamEmployeeModel::findMultipleByIds($order);
+                $employees = \WrTeamEmployeeModel::findAndSortByMultipleIds($order);
                 break;
             default:
                 $employees = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories,array('order' => 'tl_wr_team_employee.tstamp ASC'));

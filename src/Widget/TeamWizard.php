@@ -146,9 +146,9 @@ class TeamWizard extends \Widget
         if($activeRecordOrderTeam){
 
             if(is_array($activeRecordOrderTeam)){
-                $employeesBySort = \WrTeamEmployeeModel::findMultipleByIds($activeRecordOrderTeam);
+                $employeesBySort = \WrTeamEmployeeModel::findAndSortByMultipleIds($activeRecordOrderTeam);
             } else {
-                $employeesBySort = \WrTeamEmployeeModel::findMultipleByIds(unserialize($activeRecordOrderTeam));
+                $employeesBySort = \WrTeamEmployeeModel::findAndSortByMultipleIds(unserialize($activeRecordOrderTeam));
             }
 
             if($employeesBySort){
