@@ -24,15 +24,16 @@ class WrTeamEmployeeModel extends \Model
         {
 
             foreach ($arrCategories as $category) {
-                //$arrColumns[] = $t . '.categories LIKE ?';
-                //$arrValues[] = '%:"' . $category . '"%';
+
                 if($i===0){
                     $arrColumns = $t . '.categories LIKE %s';
                 } else {
                     $arrColumns .= " OR ".$t . '.categories LIKE %s';
                 }
+
                 $arrValues[] = '%:"' . $category . '"%';
                 $i++;
+
             }
 
             unset($i);
@@ -45,8 +46,26 @@ class WrTeamEmployeeModel extends \Model
 
     }
 
-    private function setCategories($categories){
+    static function findAndSortByMultipleIds($arrCategories = array(),$arrOptions = array()){
+        $t = static::$strTable;
+        $i = 0;
+        $arrValues= array();
+        $query = "";
+        if($arrCategories){
+            foreach ($arrCategories as $category){
+                if($i === 0){
+                    $query .= "?";
+                } else{
+                    $query .=" ,?";
+                }
+                $arrValues[] = $category;
+                $i++;
+            }
+            $query = $t.".id IN(".$query.") order by FIELD(id ,".$query.")";
+            $arrValues = array_merge($arrValues,$arrValues);
+            return static::findBy(array($query),$arrValues,$arrOptions);
+        }
 
+        return static::findAll($arrOptions);
     }
-
 }
