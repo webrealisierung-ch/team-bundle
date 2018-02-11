@@ -15,9 +15,6 @@ if(TL_MODE=="BE"){
     $GLOBALS['TL_CSS'][]="bundles/wrteam/team.css";
 }
 
-/**
- * BACK END MODULES
- */
 array_insert($GLOBALS['BE_MOD']['wr'],1,array(
         'wr_team' => array
         (
@@ -26,14 +23,9 @@ array_insert($GLOBALS['BE_MOD']['wr'],1,array(
         )
     )
 );
-/**
- * FRONT END MODULES
- */
-$GLOBALS['FE_MOD']['wr']['team-employee'] = 'Wr\ModuleTeamEmployee';
 
-/**
- * FRONT END CONTENT ELEMENTS
- */
-$GLOBALS['TL_CTE']['wr']['team-employee'] = 'Wr\ContentTeamEmployee';
+$GLOBALS['FE_MOD']['wr']['team-employee'] = 'Wr\TeamBundle\Module\ModuleTeamEmployee';
+
+$GLOBALS['TL_CTE']['wr']['team-employee'] = 'Wr\TeamBundle\Element\ContentTeamEmployee';
 
 $GLOBALS['BE_FFL']['teamWizard'] = 'Wr\TeamBundle\Widget\TeamWizard';
