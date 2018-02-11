@@ -155,7 +155,10 @@ class TeamWizard extends \Widget
                 $arrCheck2 = $this->generateCategoryArray($employeesBySort);
             }
 
-            if(sort($arrCheck1) === sort($arrCheck2)){
+            sort($arrCheck1);
+            sort($arrCheck2);
+
+            if($arrCheck1 === $arrCheck2){
                 return $employeesBySort;
             }
         }
@@ -181,6 +184,6 @@ class TeamWizard extends \Widget
 
     public static function isValidValue($varValue)
     {
-        return preg_match('/^-?\d+(\,\d+)?$/', $varValue);
+        return preg_match('/^-?\d+(\,\d+)+?$/', $varValue);
     }
 }
