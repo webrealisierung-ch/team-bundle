@@ -23,7 +23,7 @@ class ContentTeamEmployee extends \ContentElement
 
         $order = unserialize($this->objModel->orderTeam);
 
-        $sort =  $this->objModel->sortBy;
+        $sort =  $this->objModel->sortTeam;
 
         switch ($sort){
             case "name_asc":
