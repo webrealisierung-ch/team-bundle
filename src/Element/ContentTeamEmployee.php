@@ -6,7 +6,7 @@
  * @license LGPL-3.0+
  */
 
-namespace Wr;
+namespace Wr\TeamBundle\Element;
 
 /**
  * @author Daniel Steuri <mail@webrealisierung.ch>
