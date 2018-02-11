@@ -222,7 +222,7 @@ class tl_wr_team_employee extends Backend
 			if ($varValue == '')
 			{
 					$autoAlias = true;
-					$varValue = StringUtil::generateAlias($dc->activeRecord->title);
+					$varValue = StringUtil::generateAlias($dc->activeRecord->givenName."-".$dc->activeRecord->familyName);
 			}
 
 			$objAlias = $this->Database->prepare("SELECT id FROM tl_wr_team_employee WHERE id=? OR alias=?")
@@ -321,7 +321,7 @@ class tl_wr_team_employee extends Backend
     {
 			
         $arrCategories = array();
-        $objCategories = $this->Database->execute("SELECT id, title FROM tl_wr_team_category ORDER BY title");
+        $objCategories = $this->Database->execute("SELECT id, title FROM tl_wr_team_category ORDER BY familyName");
 
         while ($objCategories->next()) {
             {
