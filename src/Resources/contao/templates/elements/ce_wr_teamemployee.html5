@@ -6,13 +6,13 @@
 
     <?php foreach ($this->Team as $Employee): ?>
         <?php if($Employee->published ): ?>
-            <div class="employee">
+            <div class="employee" itemscope itemtype="http://schema.org/Person">
                 <?php if($Employee->singleSRC): ?>
                     <div class="employee-image"><?= Image::getHtml(FilesModel::findByUuid($Employee->singleSRC)->path); ?></div>
                 <?php endif; ?>
-                    <div class="employee-title"><?= $Employee->title." "; ?><?= $Employee->givenName; ?>  <?= $Employee->familyName; ?></div>
+                    <div class="employee-title" itemprop="name"><?= $Employee->title." "; ?><?= $Employee->givenName; ?>  <?= $Employee->familyName; ?></div>
                 <?php if($Employee->description): ?>
-                    <div class="employee-description"><?= $Employee->description; ?></div>
+                    <div class="employee-description" itemprop="description"><?= $Employee->description; ?></div>
                 <?php endif; ?>
             </div>
         <?php endif; ?>
