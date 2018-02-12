@@ -8,7 +8,8 @@
         <?php if($Employee->published ): ?>
             <div class="employee" itemscope itemtype="http://schema.org/Person">
                 <?php if($Employee->singleSRC): ?>
-                    <div class="employee-image"><?= Image::getHtml(FilesModel::findByUuid($Employee->singleSRC)->path); ?></div>
+                    <?php $src = \System::getContainer()->get('contao.image.image_factory')->create(TL_ROOT . '/' . FilesModel::findByUuid($Employee->singleSRC)->path, deserialize($this->size))->getUrl(TL_ROOT); ?>
+                    <div class="employee-image"><?= Image::getHtml($src); ?></div>
                 <?php endif; ?>
                     <div class="employee-title" itemprop="name"><?= $Employee->title." "; ?><?= $Employee->givenName; ?>  <?= $Employee->familyName; ?></div>
                 <?php if($Employee->description): ?>

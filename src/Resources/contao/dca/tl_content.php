@@ -11,7 +11,7 @@
  * @package Wr\TeamBundle
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['team-employee'] = '\'{type_legend},type,headline;{team_legend},wr_team_category,orderTeam,sortTeam;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['team-employee'] = '{type_legend},type,headline;{team_legend},wr_team_category,orderTeam,sortTeam;{image_legend:hide},size;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['wr_team_category'] =  array(
     'label'                   => &$GLOBALS['TL_LANG']['tl_content']['category'],
@@ -20,14 +20,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['wr_team_category'] =  array(
     'inputType'               => 'checkbox',
     'options_callback'        => array('tl_content_wr_team_employee', 'getCategories'),
     'eval'                    => array('multiple'=>true, 'submitOnChange'=>true, 'mandatory'=>true),
-    'sql'                     => "blob NULL"
-);
-
-$GLOBALS['TL_DCA']['tl_content']['fields']['orderTeam'] =  array(
-    'label'                   => &$GLOBALS['TL_LANG']['tl_content']['orderTeam'],
-    'exclude'                 => true,
-    'inputType'               => 'teamWizard',
-    'eval'                    => array('mandatory'=>true),
     'sql'                     => "blob NULL"
 );
 
@@ -46,6 +38,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['sortTeam'] = array(
     ),
     'eval'                    => array('tl_class'=>'w50 clr'),
     'sql'                     => "varchar(64) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['orderTeam'] =  array(
+    'label'                   => &$GLOBALS['TL_LANG']['tl_content']['orderTeam'],
+    'exclude'                 => true,
+    'inputType'               => 'teamWizard',
+    'eval'                    => array('mandatory'=>true),
+    'sql'                     => "blob NULL"
 );
 
 class tl_content_wr_team_employee extends Backend
