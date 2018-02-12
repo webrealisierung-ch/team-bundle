@@ -11,6 +11,8 @@
  * @package Wr\TeamBundle
  */
 
+\Contao\System::loadLanguageFile('tl_member');
+
 $GLOBALS['TL_DCA']['tl_wr_team_employee'] = array
 (
 
@@ -82,7 +84,7 @@ $GLOBALS['TL_DCA']['tl_wr_team_employee'] = array
 	'palettes' => array
 	(
 		"__selector__" => array("published"),
-	    'default'                     => '{title_legend},title,givenName,familyName,alias,description;{image_legend},singleSRC;{category_legend},categories;{publish_legend},published',
+	    'default'                     => '{title_legend},gender,title,givenName,familyName,alias,description;{contact_legend},phone,mobile,fax,email,website;{image_legend},singleSRC;{category_legend},categories;{publish_legend},published',
 	),
     // Subpalettes
     'subpalettes' => array
@@ -105,6 +107,16 @@ $GLOBALS['TL_DCA']['tl_wr_team_employee'] = array
 		(
 			'sql'                     => "int(10) unsigned NOT NULL default '0'"
 		),
+        'gender' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_member']['gender'],
+            'exclude'                 => true,
+            'inputType'               => 'select',
+            'options'                 => array('male', 'female'),
+            'reference'               => &$GLOBALS['TL_LANG']['MSC'],
+            'eval'                    => array('includeBlankOption'=>true, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(32) NOT NULL default ''"
+        ),
 		'title' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_wr_team_employee']['title'],
@@ -155,7 +167,51 @@ $GLOBALS['TL_DCA']['tl_wr_team_employee'] = array
 			'explanation'             => 'insertTags',
 			'sql'                     => "text NULL"
 		),
-
+        'phone' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_member']['phone'],
+            'exclude'                 => true,
+            'search'                  => true,
+            'inputType'               => 'text',
+            'eval'                    => array('maxlength'=>64, 'rgxp'=>'phone', 'decodeEntities'=>true, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(64) NOT NULL default ''"
+        ),
+        'mobile' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_member']['mobile'],
+            'exclude'                 => true,
+            'search'                  => true,
+            'inputType'               => 'text',
+            'eval'                    => array('maxlength'=>64, 'rgxp'=>'phone', 'decodeEntities'=>true, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(64) NOT NULL default ''"
+        ),
+        'fax' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_member']['fax'],
+            'exclude'                 => true,
+            'search'                  => true,
+            'inputType'               => 'text',
+            'eval'                    => array('maxlength'=>64, 'rgxp'=>'phone', 'decodeEntities'=>true, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(64) NOT NULL default ''"
+        ),
+        'email' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_member']['email'],
+            'exclude'                 => true,
+            'search'                  => true,
+            'inputType'               => 'text',
+            'eval'                    => array('maxlength'=>255, 'rgxp'=>'email', 'decodeEntities'=>true, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(255) NOT NULL default ''"
+        ),
+        'website' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_member']['website'],
+            'exclude'                 => true,
+            'search'                  => true,
+            'inputType'               => 'text',
+            'eval'                    => array('rgxp'=>'url', 'maxlength'=>255, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(255) NOT NULL default ''"
+        ),
         'singleSRC' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_wr_team_employee']['employeeSRC'],
