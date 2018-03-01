@@ -1,9 +1,10 @@
 <?php if($this->Team):?>
-<div class="<?= $this->class ?> cf"<?= $this->cssID ?>>
-    <<?= $this->hl ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-    <?= $this->headline ?>
-    </<?= $this->hl ?>>
-
+    <div class="<?= $this->class ?> cf"<?= $this->cssID ?>>
+        <?php if($this->headline): ?>
+            <<?= $this->hl ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+                <?= $this->headline ?>
+            </<?= $this->hl ?>>
+        <?php endif; ?>
     <?php foreach ($this->Team as $Employee): ?>
         <?php if($Employee->published ): ?>
             <div class="employee" itemscope itemtype="http://schema.org/Person">
