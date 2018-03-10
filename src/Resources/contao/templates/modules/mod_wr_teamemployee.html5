@@ -1,5 +1,5 @@
 <?php if($this->Team):?>
-  <div class="<?= $this->class ?> cf"<?= $this->cssID ?>>
+  <div class="<?= $this->class ?>"<?= $this->cssID ?>>
     <<?= $this->hl ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
     <?= $this->headline ?>
     </<?= $this->hl ?>>
