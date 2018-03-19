@@ -26,7 +26,7 @@
                     <div class="employee-fax" itemprop="faxNumber"><?= $Employee->fax; ?></div>
                 <?php endif; ?>
                 <?php if($Employee->email): ?>
-                    <div class="employee-email" itemprop="email"><?= $Employee->email; ?></div>
+                    <div class="employee-email" itemprop="email"><a href:"mailto:<?= $Employee->email; ?>"><?= $Employee->email; ?></a></div>
                 <?php endif; ?>
                 <?php if($Employee->website): ?>
                     <div class="employee-website" itemprop="url"><?= $Employee->website; ?></div>
