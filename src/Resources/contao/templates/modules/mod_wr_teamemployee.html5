@@ -1,21 +1,38 @@
 <?php if($this->Team):?>
-  <div class="<?= $this->class ?>"<?= $this->cssID ?>>
-    <<?= $this->hl ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-    <?= $this->headline ?>
-    </<?= $this->hl ?>>
-
+<div class="<?= $this->class ?>"<?= $this->cssID ?>>
+    <?php if($this->headline): ?>
+        <<?= $this->hl ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+        <?= $this->headline ?>
+        </<?= $this->hl ?>>
+    <?php endif; ?>
     <?php foreach ($this->Team as $Employee): ?>
-      <?php if($Employee->published ): ?>
-        <div class="employee">
-            <?php if($Employee->singleSRC): ?>
-                <div class="employee-image"><?= Image::getHtml(FilesModel::findByUuid($Employee->singleSRC)->path); ?></div>
-            <?php endif; ?>
-            <div class="employee-title"><?= $Employee->title; ?></div>
-            <?php if($Employee->description): ?>
-                <div class="employee-description"><?= $Employee->description; ?></div>
-            <?php endif; ?>
-        </div>
-      <?php endif; ?>
-  <?php endforeach; ?>
-  </div>
+        <?php if($Employee->published ): ?>
+            <div class="employee" itemscope itemtype="http://schema.org/Person">
+                <?php if($Employee->singleSRC): ?>
+                    <?php $src = \System::getContainer()->get('contao.image.image_factory')->create(TL_ROOT . '/' . FilesModel::findByUuid($Employee->singleSRC)->path, deserialize($this->size))->getUrl(TL_ROOT); ?>
+                    <div class="employee-image"><?= Image::getHtml($src); ?></div>
+                <?php endif; ?>
+                <div class="employee-title" itemprop="name"><?= $Employee->title." "; ?><?= $Employee->givenName; ?>  <?= $Employee->familyName; ?></div>
+                <?php if($Employee->description): ?>
+                    <div class="employee-description" itemprop="description"><?= $Employee->description; ?></div>
+                <?php endif; ?>
+                <?php if($Employee->phone): ?>
+                    <div class="employee-phone" itemprop="telephone"><a href="tel:<?= $Employee->phone; ?>"><?= $Employee->phone; ?></a></div>
+                <?php endif; ?>
+                <?php if($Employee->mobile): ?>
+                    <div class="employee-mobile" itemprop="telephone"><a href="tel:<?= $Employee->mobile; ?>"><?= $Employee->mobile; ?></a></div>
+                <?php endif; ?>
+                <?php if($Employee->fax): ?>
+                    <div class="employee-fax" itemprop="faxNumber"><?= $Employee->fax; ?></div>
+                <?php endif; ?>
+                <?php if($Employee->email): ?>
+                    <div class="employee-email" itemprop="email"><a href="mailto:<?= $Employee->email; ?>"><?= $Employee->email; ?></a></div>
+                <?php endif; ?>
+                <?php if($Employee->website): ?>
+                    <div class="employee-website" itemprop="url"><?= $Employee->website; ?></div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    </div>
 <?php endif; ?>
