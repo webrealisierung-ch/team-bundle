@@ -22,7 +22,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['wr_team_category'] =  array(
     'eval'                    => array('multiple'=>true, 'mandatory'=>true),
     'sql'                     => "blob NULL"
 );
-$GLOBALS['TL_DCA']['tl_module']['fields']['orderTeam'] = array(
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['sortTeam'] = array(
     'label'                   => &$GLOBALS['TL_LANG']['tl_content']['orderSRC'],
     'exclude'                 => true,
     'search'                  => false,
@@ -38,6 +39,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['orderTeam'] = array(
     'eval'                    => array('tl_class'=>'w50 clr'),
     'sql'                     => "varchar(64) NOT NULL default ''"
 );
+
 $GLOBALS['TL_DCA']['tl_module']['fields']['orderTeam'] =  array(
     'label'                   => &$GLOBALS['TL_LANG']['tl_content']['orderTeam'],
     'exclude'                 => true,
