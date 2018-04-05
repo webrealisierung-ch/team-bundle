@@ -21,9 +21,11 @@ class ModuleTeamEmployee extends \Module
 
         $categories=deserialize($this->objModel->wr_team_category);
 
-        $order = $this->objModel->sortTeam;
+        $order = unserialize($this->objModel->orderTeam);
 
-        switch ($order){
+        $sort =  $this->objModel->sortTeam;
+
+        switch ($sort){
             case "name_asc":
                 $employees = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories,array('order' => 'tl_wr_team_employee.title ASC'));
                 break;
@@ -35,6 +37,9 @@ class ModuleTeamEmployee extends \Module
                 break;
             case "date_desc":
                 $employees = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories,array('order' => 'tl_wr_team_employee.tstamp DESC'));
+                break;
+            case "custom":
+                $employees = \WrTeamEmployeeModel::findAndSortByMultipleIds($order);
                 break;
             default:
                 $employees = \WrTeamEmployeeModel::findTeamEmployeesByCategories($categories,array('order' => 'tl_wr_team_employee.tstamp ASC'));
