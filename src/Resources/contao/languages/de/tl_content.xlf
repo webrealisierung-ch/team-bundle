@@ -6,6 +6,18 @@
                 <source>Team/Categories</source>
                 <target>Team/Kategorien</target>
             </trans-unit>
+            <trans-unit id="tl_content.order_legend">
+                <source>Team/Order</source>
+                <target>Team/Sortierreihenfolge</target>
+            </trans-unit>
+            <trans-unit id="tl_content.orderTeam.0">
+                <source>Display order</source>
+                <target>Individuelle Reihenfolge</target>
+            </trans-unit>
+            <trans-unit id="tl_content.orderTeam.1">
+                <source>The display order of the team members</source>
+                <target>Sortierreihenfolge der Team Mitglieder</target>
+            </trans-unit>
             <trans-unit id="tl_content.category.0">
                 <source>Categories</source>
                 <target>Kategorien</target>

@@ -5,6 +5,15 @@
             <trans-unit id="tl_content.team_legend">
                 <source>Team/Categories</source>
             </trans-unit>
+            <trans-unit id="tl_content.order_legend">
+                <source>Team/Order</source>
+            </trans-unit>
+            <trans-unit id="tl_content.orderTeam.0">
+                <source>Display order</source>
+            </trans-unit>
+            <trans-unit id="tl_content.orderTeam.1">
+                <source>The display order of the team members</source>
+            </trans-unit>
             <trans-unit id="tl_content.category.0">
                 <source>Categories</source>
             </trans-unit>

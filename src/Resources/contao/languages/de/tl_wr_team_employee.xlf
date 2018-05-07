@@ -57,6 +57,10 @@
                 <source>Select the image of the employee</source>
                 <target>Wählen Sie das Bild des Mitarbeiters aus</target>
             </trans-unit>
+            <trans-unit id="tl_wr_team_employee.contact_legend">
+                <source>Contact details</source>
+                <target>Kontaktangaben</target>
+            </trans-unit>
             <trans-unit id="tl_wr_team_employee.category_legend">
                 <source>Categories</source>
                 <target>Kategorien</target>

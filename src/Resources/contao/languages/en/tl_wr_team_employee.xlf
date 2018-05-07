@@ -43,6 +43,9 @@
             <trans-unit id="tl_wr_team_employee.employeeSRC.1">
                 <source>Select the image of the employee</source>
             </trans-unit>
+            <trans-unit id="tl_wr_team_employee.contact_legend">
+                <source>Contact details</source>
+            </trans-unit>
             <trans-unit id="tl_wr_team_employee.category_legend">
                 <source>Categories</source>
             </trans-unit>
