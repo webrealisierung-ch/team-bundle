@@ -11,7 +11,7 @@
  * @package Wr\TeamBundle
  */
 
-$GLOBALS['TL_DCA']['tl_content']['palettes']['team-employee'] = '{type_legend},type,headline;{team_legend},wr_team_category,orderTeam,sortTeam;{image_legend:hide},size;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['team-employee'] = '{type_legend},type,headline;{team_legend},wr_team_category;{order_legend},orderTeam,sortTeam;{image_legend:hide},size;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['wr_team_category'] =  array(
     'label'                   => &$GLOBALS['TL_LANG']['tl_content']['category'],
