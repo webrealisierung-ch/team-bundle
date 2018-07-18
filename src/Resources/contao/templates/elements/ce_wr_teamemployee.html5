@@ -17,10 +17,10 @@
                     <div class="employee-description" itemprop="description"><?= $Employee->description; ?></div>
                 <?php endif; ?>
                 <?php if($Employee->phone): ?>
-                    <div class="employee-phone" itemprop="telephone"><a href="tel:<?= $Employee->phone; ?>"><?= $Employee->phone; ?></a></div>
+                    <div class="employee-phone" itemprop="telephone"><a href="tel:<?= str_replace(' ', '', $Employee->phone); ?>"><?= $Employee->phone; ?></a></div>
                 <?php endif; ?>
                 <?php if($Employee->mobile): ?>
-                    <div class="employee-mobile" itemprop="telephone"><a href="tel:<?= $Employee->mobile; ?>"><?= $Employee->mobile; ?></a></div>
+                    <div class="employee-mobile" itemprop="telephone"><a href="tel:<?= str_replace(' ', '',$Employee->mobile); ?>"><?= $Employee->mobile; ?></a></div>
                 <?php endif; ?>
                 <?php if($Employee->fax): ?>
                     <div class="employee-fax" itemprop="faxNumber"><?= $Employee->fax; ?></div>
