@@ -67,11 +67,11 @@ class tl_content_wr_team_employee extends Backend
      */
     public function getCategories()
     {
-        if (!$this->User->isAdmin)
+        /*if (!$this->User->isAdmin)
         {
             return array();
         }
-
+        */
         $arrCategories = array();
         $objCategories = $this->Database->execute("SELECT id, title FROM tl_wr_team_category ORDER BY title");
 
